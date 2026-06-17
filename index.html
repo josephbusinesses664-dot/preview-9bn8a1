@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapiceria Rivera | Custom Upholstery & Tapiceria in Stockton</title>
+    <style>
+        :root {
+            --burgundy: #7a1f2b;
+            --gold: #e0a526;
+            --cream: #faf5f0;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background-color: var(--cream);
+        }
+
+        h1, h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            text-align: center;
+            color: var(--burgundy);
+            margin-bottom: 30px;
+        }
+
+        section {
+            padding: 60px 4%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header and Navigation */
+        .sticky-header {
+            background: var(--burgundy);
+            color: #fff;
+            padding: 15px 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-header .logo {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.8em;
+            letter-spacing: 1px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            padding: 5px 0;
+            transition: color 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--burgundy);
+            color: #fff;
+            padding: 80px 4%;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: clamp(2em, 5vw, 3.5em);
+            margin-bottom: 10px;
+            color: var(--cream);
+        }
+
+        #hero p {
+            font-family: system-ui, sans-serif;
+            font-size: clamp(1em, 2vw, 1.5em);
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--burgundy);
+            padding: 15px 35px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px var(--burgundy) inset;
+        }
+
+        .btn-cta:hover {
+            background-color: #d1951f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px var(--burgundy) inset;
+        }
+
+        /* Services Grid */
+        #services h2 {
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--gold);
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--cream);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            /* Gold top border simulation */
+            border-top: 5px solid var(--gold);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--burgundy);
+            font-family: Georgia, 'Times New Roman', serif;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        /* About & Contact Sections */
+        #about p, #contact p {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        /* Contact specific styling */
+        #contact .contact-info p {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1em;
+        }
+
+        #contact .contact-info p:last-child {
+            border-bottom: none;
+        }
+
+        .phone-large {
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--burgundy);
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        .phone-large a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: var(--burgundy);
+            color: var(--cream);
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            margin-top: 40px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 640px) {
+            .sticky-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 2%;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            .nav {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .nav a {
+                margin: 0 5px;
+                padding: 5px 0;
+                font-size: 0.9em;
+            }
+
+            /* Services Grid adjustment */
+            .service-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+            }
+
+            #hero {
+                padding: 60px 4%;
+        }
+
+            #services, #about, #contact {
+                padding: 30px 4%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header & Sticky Navigation -->
+    <header class="sticky-header">
+        <div class="logo">Tapiceria Rivera</div>
+        <nav class="nav">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="hero">
+        <h1>Custom Upholstery & Tapiceria in Stockton</h1>
+        <p>Reviving beauty and comfort with professional craftsmanship.</p>
+        <a href="tel:+12094623374" class="btn-cta">Call (209) 462-3374</a>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            
+            <div class="card">
+                <h3>Furniture Upholstery</h3>
+                <p>From sofas and chairs to headboards, we restore and refresh your favorite pieces with timeless elegance.</p>
+            </div>
+
+            <div class="card">
+                <h3>Auto Interiors</h3>
+                <p>Custom seat upholstery and interior restoration for cars, trucks, and classic vehicles. Protect your investment.</p>
+            </div>
+
+            <div class="card">
+                <h3>Custom Cushions</h3>
+                <p>Need a specific size or pattern? We craft custom cushions for outdoor use, dining rooms, and unique décor needs.</p>
+            </div>
+
+            <div class="card">
+                <h3>Repairs & Restoration</h3>
+                <p>Expert handling of damaged fabric, springs, frames, and padding. Bringing antique furniture back to life with care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Tapiceria Rivera is a dedicated local Stockton upholstery shop (tapicería), committed to offering unparalleled quality custom work for both fine furniture and auto interiors. We serve the community with deep knowledge, careful craftsmanship, and passion for restoration.</p>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-info" style="max-width: 600px; margin: 20px auto;">
+            <p><strong>Phone:</strong> <span class="phone-large"><a href="tel:+12094623374">(209) 462-3374</a></span></p>
+            <p><strong>Address:</strong> 1717 S Center St, Stockton, CA 95206</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+             <strong style="color: var(--burgundy);">Hours: Please call ahead for the most accurate opening hours.</strong>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer>
+        Tapiceria Rivera © 2026
+    </footer>
+
+</body>
+</html>
